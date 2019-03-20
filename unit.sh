@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
-find / -name ginkgo
+sudo find / -name ginkgo
 #$GOPATH/bin/ginkgo -v
