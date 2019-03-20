@@ -1,3 +1,3 @@
 #!/bin/sh
-
-ginkgo -v
+set -e
+$GOPATH/bin/ginkgo -v
