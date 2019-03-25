@@ -34,10 +34,19 @@ steps:
         curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
         dep ensure
     fi
+    pwd
+    ls
+    echo $GOPATH
+    ls $GOPATH/bin
 #   go build -v .
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies'
   
-- script: bash unit.sh
+- script: |
+  pwd
+  ls
+  echo $GOPATH
+  ls $GOPATH/bin
+#- script: bash unit.sh
   workingDirectory: '$(modulePath)'
   displayName: 'Running Unit test'
