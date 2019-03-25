@@ -34,6 +34,8 @@ steps:
         curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
         dep ensure
     fi
+    go get github.com/onsi/ginkgo/ginkgo
+    go get github.com/onsi/gomega/...
     pwd
     ls
     echo $GOPATH
@@ -47,6 +49,7 @@ steps:
     ls
     echo $GOPATH
     ls $GOPATH/bin
+    $GOPATH/bin/ginkgo -v
 #- script: bash unit.sh
   workingDirectory: '$(modulePath)'
   displayName: 'Running Unit test'
